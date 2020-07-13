@@ -2,7 +2,7 @@ import tw from "twin.macro"
 import React from "react"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
-import background from "../images/map-bg.jpg"
+// import background from "../images/map-bg.jpg"
 
 const Home = styled.section`
   ${tw`relative w-screen min-h-screen flex items-center justify-start md:justify-center flex-col py-8 bg-orange-100`}
@@ -13,7 +13,7 @@ const BG = styled.div`
   ${tw`absolute inset-0`}
     z-index: 0;
     opacity: 0.35;
-    background-image: url(${background});
+    background-image: url("https://pictures.abebooks.com/ARTSOURCE1/30493336696.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
