@@ -12,7 +12,7 @@ module.exports = {
         description: `A bridal shower taking place for Piper Gullickson in August`,
         lang: `en`,
         display: `standalone`,
-        icon: `src/images/gtogfavicon.svg`,
+        icon: `src/images/gtog-favicon.svg`,
         start_url: `/`,
         background_color: `#fffdf9`,
         theme_color: `cf9f46`,
