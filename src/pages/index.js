@@ -1,10 +1,42 @@
 import tw from "twin.macro"
 import React from "react"
 import styled from "@emotion/styled"
+import { motion } from "framer-motion"
+
 import SEO from "../components/seo"
 // import background from "../images/map-bg.jpg"
 
-const Home = styled.section`
+export const easing = [0.6, -0.05, 0.01, 0.99];
+
+export const fadeInUp = {
+  initial: {
+    opacity: 0,
+    y: 200
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+        duration: 0.75,
+        ease: easing
+    }
+  }
+};
+
+export const fadeInDelay = {
+  initial: {
+    opacity: 0
+  },
+  animate: {
+    opacity: 1,
+    duration: 0.4,
+    transition: {
+        delayChildren: 0.4,
+    }
+  }
+};
+
+const Home = styled(motion.section)`
   ${tw`relative w-screen min-h-screen flex items-center justify-start md:justify-center flex-col py-8 bg-orange-100`}
   ${'' /* background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F6E05E' fill-opacity='0.25' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"); */}
 `
@@ -25,7 +57,7 @@ const Container = styled.div`
   max-width: 768px;
 `
 
-const Main = styled.div`
+const Main = styled(motion.div)`
  ${tw`relative pt-6 px-4 pb-6 md:pt-12 md:px-16 md:pb-8 rounded-lg shadow-2xl text-center mb-6 md:mb-auto`}
  background: #FFFDF9;
 `
@@ -112,11 +144,11 @@ const Footer = styled.footer`
 `
 
 export default () => (
-  <Home>
+  <Home exit={{ opacity: 0 }} initial="initial" animate="animate" variants={fadeInDelay}>
     <BG></BG>
       <Container>
         <SEO title="Home" />
-        <Main>
+        <Main variants={fadeInUp}>
           <Dots/>
           <Dots top="top"/>
           <Heading>
@@ -136,7 +168,7 @@ export default () => (
               {/* <a href="#">16110 Gulls Bluff Ln Cypress, TX 77433</a> */}
             </EventInfo>
             <RSVP>
-              Kindly RSVP by August 15 <a href="mailto">erinmichellefaulk@gmail.com</a>
+              Kindly RSVP by August 19th <a href="mailto:erinmichellefaulk@gmail.com">erinmichellefaulk@gmail.com</a>
             </RSVP>
           </Content>
           <Footer>
