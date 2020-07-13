@@ -44,6 +44,8 @@ const Home = styled(motion.section)`
 const BG = styled.div`
   ${tw`absolute inset-0`}
     z-index: 0;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
     opacity: 0.35;
     background-image: url("https://pictures.abebooks.com/ARTSOURCE1/30493336696.jpg");
     background-repeat: no-repeat;
@@ -163,12 +165,12 @@ export default () => (
               <div>Ashley Cupstid, Erin Faulk & Kathryn Williamson</div>
             </Hosts>
             <EventInfo>
-              <div>August 22nd in Cypress, TX</div>
-              <div>Please check back for details in the near future</div>
+              <div>August 22 in Cypress, TX</div>
+              <div>Please check back for details in the near future.</div>
               {/* <a href="#">16110 Gulls Bluff Ln Cypress, TX 77433</a> */}
             </EventInfo>
             <RSVP>
-              Kindly RSVP by August 19th <a href="mailto:erinmichellefaulk@gmail.com">erinmichellefaulk@gmail.com</a>
+              Kindly RSVP by August 19 to <a href="mailto:erinmichellefaulk@gmail.com">erinmichellefaulk@gmail.com</a>
             </RSVP>
           </Content>
           <Footer>
