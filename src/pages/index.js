@@ -21,7 +21,7 @@ const BG = styled.div`
 `
 
 const Container = styled.div`
-  ${tw`w-full mx-auto px-4 md:px-8 z-10`}
+  ${tw`w-full mx-auto px-8 z-10`}
   max-width: 768px;
 `
 
@@ -128,9 +128,7 @@ export default () => (
             <Intro><div>Please join us for a bridal shower celebrating</div><span>Piper Gullickson</span></Intro>
             <Hosts>
               <span>Hosted by</span>
-              <div>Ashley Cupstid & Tammy Lovett</div>
-              <div>Erin & Monica Faulk</div>
-              <div>Kathryn Williamson & Kellie Briggs</div>
+              <div>Ashley Cupstid, Erin Faulk & Kathryn Williamson</div>
             </Hosts>
             <EventInfo>
               <div>August 22nd in Cypress, TX</div>
