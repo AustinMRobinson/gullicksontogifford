@@ -43,12 +43,12 @@ const Home = styled(motion.section)`
 const BG = styled.div`
   ${tw`absolute inset-0`}
     z-index: 0;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
     opacity: 0.35;
     background-image: url("https://pictures.abebooks.com/ARTSOURCE1/30493336696.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 120%;
     background-position: center center;
   }
 `
@@ -59,7 +59,7 @@ const Container = styled.div`
 `
 
 const Main = styled(motion.div)`
- ${tw`relative pt-6 px-4 pb-6 md:pt-12 md:px-16 md:pb-8 rounded-lg shadow-2xl text-center mb-6 md:mb-auto`}
+ ${tw`relative pt-8 px-6 pb-8 md:pt-12 md:px-16 md:pb-8 rounded-lg shadow-2xl text-center mb-6 md:mb-auto`}
  background: #FFFDF9;
 `
 
@@ -121,9 +121,22 @@ const EventInfo = styled.div`
   div:first-child {
     ${tw`text-lg font-medium`}
   }
+  .time-slots {
+    ${tw`py-4`}
+  }
+  .covid {
+    ${tw`pt-2 opacity-75 text-xs`}
+    span {
+      ${tw`font-semibold`}
+    }
+    a {
+      ${tw`underline`}
+    }
+  }
   ${'' /* div:nth-child(2) {
     ${tw`opacity-50`}
   } */}
+
 `
 const RSVP = styled.div`
   a {
@@ -140,7 +153,7 @@ const Footer = styled.footer`
     }
   }
   span {
-    ${tw`block pt-2 underline`}
+    ${tw`pt-2 underline`}
   }
 `
 
@@ -161,12 +174,22 @@ export default () => (
             <Intro><div>Please join us for a bridal shower celebrating</div><span>Piper Gullickson</span></Intro>
             <Hosts>
               <span>Hosted by</span>
-              <div>Ashley Cupstid, Erin Faulk & Kathryn Williamson</div>
+              <div>Ashley Cupstid<br></br>Erin Faulk<br></br>Kathryn Williamson</div>
             </Hosts>
             <EventInfo>
-              <div>August 22 in Cypress, TX</div>
-              <div>Please check back for details in the near future.</div>
-              {/* <a href="#">16110 Gulls Bluff Ln Cypress, TX 77433</a> */}
+              <div>Saturday, August 22</div>
+              <a href="#">16110 Gulls Bluff Ln<br></br> Cypress, TX 77433</a>
+              <div className="time-slots">
+              Time Slot 1: 1 - 2:30 pm
+              <br></br>
+              Time Slot 2: 3 - 4:30 pm 
+              </div>
+              <div className="covid">
+                <span>COVID-19 Updates:</span>
+                <br></br>
+                Out of respect for your health and safety, we will be celebrating the future Mrs. Gifford in two shifts so as to allow for ample social distancing. Please <a href="https://docs.google.com/spreadsheets/d/1_0nShYcDLBFqtCruZSnW6jU7-RTXFUUss84QmdA9rhc/edit?usp=sharing" target="_blank">click here</a> to sign up for the time slot you’d like to attend. Each time slot will allow for 22 guests maximum and will consist of the same activities so no one misses out on the fun! Thank you for understanding. We can’t wait to celebrate Piper with you all! 
+                Any updates will be posted here so please continue to check back.
+              </div>
             </EventInfo>
             <RSVP>
               Kindly RSVP by August 19 to <a href="mailto:erinmichellefaulk@gmail.com">erinmichellefaulk@gmail.com</a>
@@ -174,7 +197,7 @@ export default () => (
           </Content>
           <Footer>
             <div>
-              Registered at <a target="blank" href="https://track-registry.theknot.com/track/view?r=736121717&rt=14020&a=995&lt=RetailerGVR&st=WeddingWebsite&sp=LinkedRegistries&ss=RegistryPage&eventType=1">Amazon</a>, <a target="blank" href="https://www.target.com/gift-registry/giftgiver?registryId=f248eac51b4f4ff0954adffc7c669c60&type=WEDDING&clkid=d8de8069N334211eabd3442010a246c11&lnm=81938&afid=The%20Knot%2C%20Inc%20and%20Subsidiaries&ref=tgt_adv_xasd0002">Target</a>, <a target="blank" href="https://www.crateandbarrel.com/jump.aspx?bid=1001788&t=8&grid=6142323&trkid=1848&wcsid=779057834">Crate and Barrel</a>, Pottery Barn, and <a target="blank" href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549099218?wcref=yes&wcsid=779057899">Bed Bath & Beyond</a>
+              Registered at <a target="blank" href="https://track-registry.theknot.com/track/view?r=736121717&rt=14020&a=995&lt=RetailerGVR&st=WeddingWebsite&sp=LinkedRegistries&ss=RegistryPage&eventType=1">Amazon</a>, <a target="blank" href="https://www.target.com/gift-registry/giftgiver?registryId=f248eac51b4f4ff0954adffc7c669c60&type=WEDDING&clkid=d8de8069N334211eabd3442010a246c11&lnm=81938&afid=The%20Knot%2C%20Inc%20and%20Subsidiaries&ref=tgt_adv_xasd0002">Target</a>, <a target="blank" href="https://www.crateandbarrel.com/jump.aspx?bid=1001788&t=8&grid=6142323&trkid=1848&wcsid=779057834">Crate and Barrel</a>, and <a target="blank" href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549099218?wcref=yes&wcsid=779057899">Bed Bath & Beyond</a>
             </div>
             <span>Masks required</span>
           </Footer>
