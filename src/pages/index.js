@@ -125,7 +125,7 @@ const EventInfo = styled.div`
     ${tw`py-4`}
   }
   .covid {
-    ${tw`pt-2 opacity-75 text-xs`}
+    ${tw`pt-6 opacity-75 text-xs`}
     span {
       ${tw`font-semibold`}
     }
@@ -177,17 +177,16 @@ export default () => (
               <div>Ashley Cupstid<br></br>Erin Faulk<br></br>Kathryn Williamson</div>
             </Hosts>
             <EventInfo>
-              <div>Saturday, August 22</div>
+              <div>August 22, 1-3 PM</div>
               <a href="#">16110 Gulls Bluff Ln<br></br> Cypress, TX 77433</a>
-              <div className="time-slots">
+              {/* <div className="time-slots">
               Time Slot 1: 1 - 2:30 pm
               <br></br>
               Time Slot 2: 3 - 4:30 pm 
-              </div>
+              </div> */}
               <div className="covid">
                 <span>COVID-19 Updates:</span>
                 <br></br>
-                Out of respect for your health and safety, we will be celebrating the future Mrs. Gifford in two shifts so as to allow for ample social distancing. Please <a href="https://docs.google.com/spreadsheets/d/1_0nShYcDLBFqtCruZSnW6jU7-RTXFUUss84QmdA9rhc/edit?usp=sharing" target="_blank">click here</a> to sign up for the time slot you’d like to attend. Each time slot will allow for 22 guests maximum and will consist of the same activities so no one misses out on the fun! Thank you for understanding. We can’t wait to celebrate Piper with you all! 
                 Any updates will be posted here so please continue to check back.
               </div>
             </EventInfo>
