@@ -179,6 +179,7 @@ export default () => (
             <EventInfo>
               <div>August 22, 1-3 PM</div>
               <a href="#">16110 Gulls Bluff Ln<br></br> Cypress, TX 77433</a>
+              <div>*Must use Waze for navigation</div>
               {/* <div className="time-slots">
               Time Slot 1: 1 - 2:30 pm
               <br></br>
